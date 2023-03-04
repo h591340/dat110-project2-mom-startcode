@@ -18,6 +18,7 @@ public class MessagingServer {
 			
 			System.out.println("Messaging server: " + ex.getMessage());
 			ex.printStackTrace();
+			
 		}
 	}
 
@@ -29,6 +30,9 @@ public class MessagingServer {
 		// TODO
 		// accept TCP connection on welcome socket and create connection
 		
+		if(welcomeSocket!=null)
+		{
+		
 		try {
 			
 			Socket connectionSocket = welcomeSocket.accept();
@@ -39,7 +43,9 @@ public class MessagingServer {
 			
 			System.out.println("Messaging server: " + ex.getMessage());
 			ex.printStackTrace();
+			stop();
 			// TODO: closing welcomeSocket
+		}
 		}
 		
 		return connection;
