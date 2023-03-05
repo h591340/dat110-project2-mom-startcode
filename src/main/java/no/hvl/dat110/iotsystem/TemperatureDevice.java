@@ -1,9 +1,6 @@
 package no.hvl.dat110.iotsystem;
 
 import no.hvl.dat110.client.Client;
-import no.hvl.dat110.common.TODO;
-import no.hvl.dat110.messages.Message;
-import no.hvl.dat110.messages.PublishMsg;
 
 public class TemperatureDevice {
 
@@ -22,7 +19,7 @@ public class TemperatureDevice {
 		// - connect to the broker - user "sensor" as the user name
 		// - publish the temperature(s)
 		// - disconnect from the broker
-		Client client = new Client("Temperature", Common.BROKERHOST, Common.BROKERPORT);
+		Client client = new Client("sensor", Common.BROKERHOST, Common.BROKERPORT);
 		
 		client.connect();
 		//client.createTopic("temperature");
